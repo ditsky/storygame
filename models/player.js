@@ -3,11 +3,10 @@ const mongoose = require( 'mongoose' );
 
 //var userSchema = mongoose.Schema( {any:{}})
 
-var gameSchema = mongoose.Schema( {
-  roomname: String,
-  password: String,
-  numplayers: String,
-  hostname: String
+var playerSchema = mongoose.Schema( {
+  name:String,
+  role: String
+
 } );
 
-module.exports = mongoose.model( 'Game', gameSchema );
+module.exports = mongoose.model( 'Player', playerSchema );
