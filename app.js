@@ -21,7 +21,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/host', function (req,res){
+  res.render('host', {title: 'yep this is host page'});
+})
+app.use('/join', function (req,res){
+  res.render('join', { title: 'Andy is my fucking man' });
+})
 
+app.use('/game', function (req,res){
+  res.render('game', { title: 'Andy yung man yung dream' });
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
