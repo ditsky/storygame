@@ -34,11 +34,11 @@ app.use('/info', function (req,res){
 })
 
 app.use('/contact', function (req,res){
-  res.render('contact', { title: 'contact information' });
+  res.render('contact', { title: 'Contact Information' });
 })
 
 app.use('/game', function (req,res){
-  res.render('game', { title: 'Story Time !!!' });
+  res.render('game', { title: 'Who's the SPY?!!' });
 })
 
 app.get('/images/:image_name', function(req, res) {
