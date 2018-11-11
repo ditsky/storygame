@@ -10,19 +10,9 @@
 
 </head>
 
-<body>
+<body class="bg-info">
+    <ul >
 
-  <style>
-body {
-      background-image: url("/images/background.JPG");
-}
-
-</style>
-
-    <ul class="nav navbar-dark light bordered w-100 p-3">
-        <li class="nav-item "><a class="text-primary nav-link active" href="/info" role="button">How To Play</a></li>
-
-        <li class="nav-item "><a class="text-primary nav-link active" href="/contact" role="button">Contact</a></li>
     </ul>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -31,20 +21,21 @@ body {
   <title><%= title %></title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
     <h1><%= title %></h1>
-    <div class="jumbotron ">
+    <div class="jumbotron">
+    <h1 class="display-4"></h1>
+    <p class="lead">The rule is simple</p>
 
-    <h1 class="center">Welcome to the Story of Spy!</h1>
-    <p class="lead"></p>
-    <hr class="my-7">
-    <p></p>
-    <div class="col-md-15 text-center">
-    <a class="btn btn-primary btn-lg center"  href="/host" role="button">Host Game</a>
+    <hr class="my-4">
+    <p class="font-weight-bold">  First, a starter phrase will be randomly given as the starting phrase of the story. </p>
+    <p class="font-weight-bold">     Then, each player will be randomly assigned as either the SPY or the TOWN.
+    <p class="font-weight-bold">     Then, each player will be randomly assigned as either the SPY or the TOWN.
+      The TOWN will be given a key phrase. While the SPY will be given a black.</p>
+    <p class="font-weight-bold">  Then, by order, each person has to continue the story based on the key phrase given. </p>
+    <p class="font-weight-bold">    The mission of Spy is to simply guess what the key phrase might be and avoid being voted out at the end. </p>
+    <p class="font-weight-bold">The mission of Town is to vote Spy out.</p>
 
-    <a class="btn btn-primary btn-lg center"  href="/join" role="button">Join Game</a>
-
-  </div>
 
 
 </div>
-</body>
+
 </html>

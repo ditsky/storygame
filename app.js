@@ -29,6 +29,14 @@ app.use('/join', function (req,res){
   res.render('join', { title: 'Joining a lobby...' });
 })
 
+app.use('/info', function (req,res){
+  res.render('info', { title: 'How to play' });
+})
+
+app.use('/contact', function (req,res){
+  res.render('contact', { title: 'contact information' });
+})
+
 app.use('/game', function (req,res){
   res.render('game', { title: 'Story Time !!!' });
 })
