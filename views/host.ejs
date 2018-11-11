@@ -11,10 +11,8 @@
 </head>
 
 <body class="bg-info">
-    <ul class="nav navbar-dark light bordered">
-        <li class="nav-item"><a class="text-primary nav-link active" href="/">Info</a></li>
-        <li class="nav-item"><a class="text-primary nav-link active" href="/host">Settings</a></li>
-        <li class="nav-item"><a class="text-primary nav-link active" href="/join">Contact</a></li>
+    <ul >
+
     </ul>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -24,12 +22,45 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
     <h1><%= title %></h1>
     <div class="jumbotron">
-    <h1 class="display-4">HOst page FUCK U ANDY</h1>
-    <p class="lead">Andy is The Mandy.</p>
+    <h1 class="display-4"></h1>
+    <p class="lead">Please enter your information.</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="/host" role="button">Host Game</a>
-    <a class="btn btn-primary btn-lg" href="/join" role="button">Join Game</a>
+
+    <form>
+      <div class="form-group">
+
+        <label class="col-sm-2 col-form-label col-form-label-lg" for="exampleInputEmail1">What's your name?</label>
+        <input class="form-control form-control-lg" type="text" id=""  placeholder="Enter your name" >
+
+      </div>
+      <div class="form-group">
+
+        <label class="col-sm-5 col-form-label col-form-label-lg" for="exampleInputEmail1">Set an ID for the lobby </label>
+        <input class="form-control form-control-lg" type="text" id=""  placeholder="Set ID name" >
+
+      </div>
+      <div class="form-group">
+        <label class="col-sm-5 col-form-label col-form-label-lg" for="password">Please set a password for the lobby</label>
+        <input type="password" class="form-control form-control-lg" id="" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label class="col-sm-5 col-form-label col-form-label-lg" for="number">What is the number of players?</label>
+          <select id="" class="form-control form-control-lg">
+            <option>number of player</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+
+
+      </div>
+      <div class="col-md-15 text-center">
+      <a class="btn btn-primary btn-lg" id="" href="/host" role="button"> Submit</a>
+    </div>
+    </form>
+
+
+
 </div>
 </body>
 </html>

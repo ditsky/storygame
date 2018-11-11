@@ -11,7 +11,13 @@ a {
    color: transparent;
    text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
+.vertical-center {
+  /*/min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  /*min-height: 100vh; /* These two lines are counted as one :-)       */
 
+  display: flex;
+  align-items: center;
+}
 .center {
     text-align: center;
 }
@@ -59,7 +65,9 @@ a {
   //background: none;
   //color:#004E89;
 }
-
+.pl-0 {
+  padding-left:  0 !important;
+}
 .phone{
   background-image: url(https://i5.walmartimages.ca/images/Large/832/882/6000196832882.jpg?odnBound=460);
   /* Full height */

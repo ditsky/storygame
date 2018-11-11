@@ -17,20 +17,27 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/host', function (req,res){
-  res.render('host', {title: 'yep this is host page'});
+  res.render('host', {title: 'Hosting a new lobby...'});
 })
 app.use('/join', function (req,res){
-  res.render('join', { title: 'Andy is my fucking man' });
+  res.render('join', { title: 'Joining a lobby...' });
 })
 
 app.use('/game', function (req,res){
-  res.render('game', { title: 'Andy yung man yung dream' });
+  res.render('game', { title: 'Story Time !!!' });
 })
+
+app.get('/images/:image_name', function(req, res) {
+  console.log(path.join(__dirname, 'public/images', req.params.image_name));
+  res.sendFile(path.join(__dirname, 'public/images', req.params.image_name));
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
