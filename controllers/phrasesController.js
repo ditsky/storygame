@@ -22,19 +22,3 @@ exports.getAllPhrases = ( req, res ) => {
       console.log( 'phrase promise complete' );
     } );
 };
-
-exports.savePhrase = ( req, res ) => {
-  console.log("in savePhrase!")
-  console.dir(req)
-  let newPhrase = new Phrase( {
-    phrase: req.body.phrase
-  } )
-
-  newPhrase.save()
-    .then( () => {
-      res.redirect( '/game' );
-    } )
-    .catch( error => {
-      res.send( error );
-    } );
-};

@@ -7,7 +7,22 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var storiesController = require('./controllers/storiesController');
+var playersController = require('./controllers/playersController');
+
+
+var mongoose = require( 'mongoose' );
+
 var app = express();
+
+
+mongoose.connect( 'mongodb://localhost/storygame' );
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we are connected!")
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,9 +43,13 @@ app.use('/join', function (req,res){
   res.render('join', { title: 'Andy is my fucking man' });
 })
 
-app.use('/game', function (req,res){
-  res.render('game', { title: 'Andy yung man yung dream' });
+// app.get('/game', storiesController.getAllStories);
+app.use('/game', function(req,res){
+  res.render('game')
 })
+app.post('/saveStory', storiesController.saveStory);
+app.post('/savePlayer', playersController.savePlayer);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

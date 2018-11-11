@@ -20,16 +20,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
-  <title><%= title %></title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-    <h1><%= title %></h1>
-    <div class="jumbotron">
-    <h1 class="display-4">HOst page FUCK U ANDY</h1>
-    <p class="lead">Andy is The Mandy.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="/host" role="button">Host Game</a>
-    <a class="btn btn-primary btn-lg" href="/join" role="button">Join Game</a>
+  <form method="post" action="saveGame">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend"><span class="input-group-text text-primary" id="inputGroup-sizing-sm">Room Name:</span></div><input class="form-control" type="text" name="roomname" aria-label="Small" aria-describedby="inputGroup-sizing-sm" /></div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend"><span class="input-group-text text-primary" id="inputGroup-sizing-sm">Room Password:</span></div><input class="form-control" type="text" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" /></div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend"><span class="input-group-text text-primary" id="inputGroup-sizing-sm"># of Players:</span></div><input class="form-control" type="text" name="numplayers" aria-label="Small" aria-describedby="inputGroup-sizing-sm" /></div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend"><span class="input-group-text text-primary" id="inputGroup-sizing-sm">Player name:</span></div><input class="form-control" type="text" name="hostname" aria-label="Small" aria-describedby="inputGroup-sizing-sm" /></div>
+    <div class="text-center"><input type="submit" /></div>
+  </form>
 </div>
 </body>
 </html>
