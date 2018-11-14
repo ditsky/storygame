@@ -38,13 +38,13 @@ app.use('/contact', function (req,res){
 })
 
 app.use('/game', function (req,res){
-  res.render('game', { title: 'Who's the SPY?!!' });
+  res.render('game', { title: 'Who is the spy?!!' });
 })
 
-app.get('/images/:image_name', function(req, res) {
+/*app.get('/images/:image_name', function(req, res) {
   console.log(path.join(__dirname, 'public/images', req.params.image_name));
   res.sendFile(path.join(__dirname, 'public/images', req.params.image_name));
-})
+})**/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
